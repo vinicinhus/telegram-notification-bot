@@ -13,7 +13,7 @@ This Python script showcases the use of the Telegram Bot API to report errors or
 
 1. Add your bot to the group where you want to receive notifications.
 2. Grant admin permissions to your bot in the group.
-3. Access the API endpoint `https://api.telegram.org/bot<your_bot_token>/getUpdates`.
+3. Access the API endpoint `https://api.telegram.org/bot<your_bot_token>/getUpdates`
 4. Retrieve the chat ID from the API response.
 
 Example API response:
