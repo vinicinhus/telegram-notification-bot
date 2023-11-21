@@ -6,21 +6,21 @@ token = "your_token_key"
 chat_id = "your_chat_id"
 
 
-async def report_message(error_message: str) -> None:
+async def report_message(notification_message: str) -> None:
     """
     Sends a notification message to a Telegram group.
 
     Args:
-    - error_message (str): The error message to be reported.
+    - notification_message (str): The notification message to be reported.
 
     Returns:
     - None
     """
     bot = telegram.Bot(token=token)
 
-    await bot.sendMessage(chat_id=chat_id, text=error_message)
+    await bot.sendMessage(chat_id=chat_id, text=notification_message)
 
-    print("Error reported to the telegram group!")
+    print("Notification reported to the telegram group!")
 
 
 if __name__ == '__main__':
@@ -30,4 +30,4 @@ if __name__ == '__main__':
         print(result)
     except ZeroDivisionError as e:
         error_text = f"Error: {str(e)}"
-        asyncio.run(report_message(error_message=error_text))
+        asyncio.run(report_message(notification_message=error_text))
